@@ -1,0 +1,226 @@
+:root {
+  /* COLORS */
+  --color-accent: #47b4c2;
+  --color-field-background: #f7f7fd;
+  --color-field-accent-background: #ffffff;
+  --color-main-text: #000000;
+  --color-accent-text: #ffffff;
+  --color-error: #ff5e5e;
+  --color-shadow: #0000000d;
+  --color-icon: #333333;
+
+  /* ANIMATION */
+  --hover-transition-duration: 0.2s;
+
+  /* FONTS */
+  --font-family: Urbanist, Arial, sans-serif;
+
+  /* SIZES */
+  --input-border-radius: 30px;
+  --input-height: 52px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: var(--font-family);
+}
+
+html {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--color-main-text);
+  background-color: var(--color-field-background);
+}
+
+.icon svg {
+  fill: var(--color-icon);
+  stroke: var(--color-icon);
+
+  transition: all var(--hover-transition-duration) ease-out;
+}
+
+.icon:hover svg {
+  fill: var(--color-accent);
+  stroke: var(--color-accent);
+}
+
+.page-header__container {
+  display: flex;
+  gap: 65px;
+  padding: 24px 0;
+  padding-right: 215px;
+  padding-left: 67px;
+  box-shadow: 0px 1px 20px 0px #0000000d;
+}
+
+.page-header__auth-wrapper {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-left: auto;
+}
+
+.page-header__search {
+  width: 100%;
+  max-width: 818px;
+  margin-left: auto;
+}
+
+.page-header__action-btns {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.icon-enter {
+  width: 18px;
+  height: 18px;
+}
+
+.icon-enter svg {
+  fill: var(--color-main-text);
+  stroke: var(--color-main-text);
+
+  transition: all var(--hover-transition-duration) ease-out;
+}
+
+.page-header__auth-wrapper .link:hover .icon-enter svg {
+  fill: var(--color-accent);
+  stroke: var(--color-accent);
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 25px;
+  font-family: var(--font-family);
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--color-accent-text);
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  background: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  border-radius: 50px;
+  transition: all var(--hover-transition-duration) ease-out;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: var(--color-main-text);
+  background: var(--color-field-background);
+  border: 1px solid var(--color-accent);
+}
+
+.button--outline {
+  color: var(--color-main-text);
+  background: var(--color-field-background);
+}
+
+.button--outline:hover {
+  color: var(--color-accent-text);
+  background: var(--color-accent);
+}
+
+.button--color-red {
+  border: 1px solid var(--color-error);
+}
+
+.button--variant-medium {
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.button-icon {
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  line-height: 24px;
+  text-decoration: none;
+  color: var(--color-main-text);
+  transition: all var(--hover-transition-duration) ease-out;
+}
+
+.link:hover {
+  color: var(--color-accent);
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.input input {
+  height: var(--input-height);
+  padding-left: 30px;
+  padding-right: 10px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  width: 100%;
+  border: none;
+  border-radius: var(--input-border-radius);
+  background: var(--color-field-accent-background);
+  outline: none;
+}
+
+.input--with-button input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.input__button {
+  display: flex;
+  align-items: center;
+  height: var(--input-height);
+  padding-right: 10px;
+  border-top-right-radius: var(--input-border-radius);
+  border-bottom-right-radius: var(--input-border-radius);
+  background: var(--color-field-accent-background);
+}
+
+.profile__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--color-field-accent-background);
+  border: none;
+  cursor: pointer;
+}
+
+.profile__button img {
+  width: 52px;
+  height: 52px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* .button:hover {
+  background: #5ba0a9;
+  border-color: #5ba0a9;
+} */
+
+/* .button--outline:hover {
+  color: var(--color-main-text);
+  background: #d3f4f9;
+  border-color: #5ba0a9;
+} */
