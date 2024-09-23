@@ -21,6 +21,7 @@
   /* SIZES */
   --input-border-radius: 30px;
   --input-height: 52px;
+  --header-height: 100px;
 }
 
 * {
@@ -39,6 +40,12 @@ html {
   font-size: 16px;
   color: var(--color-main-text);
   background-color: var(--color-field-background);
+}
+
+.container {
+  max-width: 1010px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .icon svg {
@@ -62,6 +69,7 @@ html {
 .page-header__container {
   display: flex;
   gap: 65px;
+  height: var(--header-height);
   padding: 24px 0;
   padding-right: 215px;
   padding-left: 67px;
@@ -178,6 +186,10 @@ html {
   outline: none;
 }
 
+.input input::placeholder {
+  font-weight: 300;
+}
+
 .input--with-button input {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
@@ -264,4 +276,34 @@ html {
 
 .profile__action-list-item > a > .icon {
   margin-right: 10px;
+}
+
+.main-search {
+  display: flex;
+  height: calc(100vh - var(--header-height));
+}
+
+.main-search__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: calc(var(--header-height) + 55px);
+}
+
+.main-search__title {
+  margin: 0;
+  margin-bottom: 32px;
+  font-size: 48px;
+  font-weight: 600;
+  color: var(--color-accent-darken);
+}
+
+.main-search .input input {
+  font-size: 20px;
+}
+
+.main-search .input__button button {
+  font-size: 20px;
 }
