@@ -1,6 +1,9 @@
 :root {
   /* COLORS */
   --color-accent: #47b4c2;
+  --color-accent-border: #a6c9ce;
+  --color-accent-darken: #5ba0a9;
+  --color-hover-btn: #258f9d;
   --color-field-background: #f7f7fd;
   --color-field-accent-background: #ffffff;
   --color-main-text: #000000;
@@ -10,10 +13,10 @@
   --color-icon: #333333;
 
   /* ANIMATION */
-  --hover-transition-duration: 0.2s;
+  --hover-transition: 0.2s ease-out;
 
   /* FONTS */
-  --font-family: Urbanist, Arial, sans-serif;
+  --font-family: Geologica, Arial, sans-serif;
 
   /* SIZES */
   --input-border-radius: 30px;
@@ -26,7 +29,7 @@
 
 html,
 body {
-  height: 100%;
+  min-height: 100%;
   font-family: var(--font-family);
 }
 
@@ -41,13 +44,19 @@ html {
 .icon svg {
   fill: var(--color-icon);
   stroke: var(--color-icon);
-
-  transition: all var(--hover-transition-duration) ease-out;
+  transition: var(--hover-transition);
 }
 
 .icon:hover svg {
   fill: var(--color-accent);
   stroke: var(--color-accent);
+}
+
+.page-header {
+  position: sticky;
+  top: 0;
+  background-color: var(--color-field-background);
+  z-index: 100;
 }
 
 .page-header__container {
@@ -86,8 +95,7 @@ html {
 .icon-enter svg {
   fill: var(--color-main-text);
   stroke: var(--color-main-text);
-
-  transition: all var(--hover-transition-duration) ease-out;
+  transition: var(--hover-transition);
 }
 
 .page-header__auth-wrapper .link:hover .icon-enter svg {
@@ -109,28 +117,18 @@ html {
   background: var(--color-accent);
   border: 1px solid var(--color-accent);
   border-radius: 50px;
-  transition: all var(--hover-transition-duration) ease-out;
+  transition: var(--hover-transition);
   cursor: pointer;
 }
 
 .button:hover {
-  color: var(--color-main-text);
-  background: var(--color-field-background);
+  background: var(--color-hover-btn);
   border: 1px solid var(--color-accent);
 }
 
-.button--outline {
-  color: var(--color-main-text);
-  background: var(--color-field-background);
-}
-
-.button--outline:hover {
-  color: var(--color-accent-text);
+.button:active {
   background: var(--color-accent);
-}
-
-.button--color-red {
-  border: 1px solid var(--color-error);
+  border: 1px solid var(--color-hover-btn);
 }
 
 .button--variant-medium {
@@ -153,7 +151,7 @@ html {
   line-height: 24px;
   text-decoration: none;
   color: var(--color-main-text);
-  transition: all var(--hover-transition-duration) ease-out;
+  transition: var(--hover-transition);
 }
 
 .link:hover {
@@ -214,13 +212,56 @@ html {
   border-radius: 50%;
 }
 
-/* .button:hover {
-  background: #5ba0a9;
-  border-color: #5ba0a9;
-} */
+.profile__action-wrapper {
+  position: relative;
+}
 
-/* .button--outline:hover {
+.profile__action-list {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  list-style: none;
+  background: var(--color-field-accent-background);
+  border: 1px solid var(--color-accent-border);
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.profile__action-list::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -7px;
+  right: 20px;
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border: 1px solid var(--color-accent-border);
+  border-bottom: 0;
+  border-right: 0;
+  transform: rotate(45deg);
+}
+
+.profile__action-list-item .icon svg {
+  fill: var(--color-accent-darken);
+  stroke: var(--color-accent-darken);
+}
+
+.profile__action-list-item > a {
+  display: flex;
   color: var(--color-main-text);
-  background: #d3f4f9;
-  border-color: #5ba0a9;
-} */
+  text-decoration: none;
+  transition: var(--hover-transition);
+}
+
+.profile__action-list-item > a:hover {
+  color: var(--color-accent);
+}
+
+.profile__action-list-item > a > .icon {
+  margin-right: 10px;
+}
