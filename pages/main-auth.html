@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-    <link rel="stylesheet" href="styles/normalize.css" />
-    <link rel="stylesheet" href="styles/fonts.css" />
-    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="../styles/normalize.css" />
+    <link rel="stylesheet" href="../styles/fonts.css" />
+    <link rel="stylesheet" href="../styles/global.css" />
   </head>
   <body>
     <header class="page-header">
@@ -63,7 +63,7 @@
                         <img
                           width="50"
                           height="50"
-                          src="assets/img/profile-img-example.jpg"
+                          src="../assets/img/profile-img-example.jpg"
                           alt="seller-avatar"
                         />
                       </div>
@@ -108,7 +108,7 @@
                         <img
                           width="50"
                           height="50"
-                          src="assets/img/profile-img-example.jpg"
+                          src="../assets/img/profile-img-example.jpg"
                           alt="seller-avatar"
                         />
                       </div>
@@ -153,7 +153,7 @@
                         <img
                           width="50"
                           height="50"
-                          src="assets/img/profile-img-example.jpg"
+                          src="../assets/img/profile-img-example.jpg"
                           alt="seller-avatar"
                         />
                       </div>
@@ -198,7 +198,7 @@
                         <img
                           width="50"
                           height="50"
-                          src="assets/img/profile-img-example.jpg"
+                          src="../assets/img/profile-img-example.jpg"
                           alt="seller-avatar"
                         />
                       </div>
@@ -249,21 +249,26 @@
           <div class="modal__form-element">
             <div class="input input--outline input--variant-medium">
               <label>
-                <p class="input__label">Эл. Почта</p>
+                <p class="input__label">
+                  Эл. Почта <span class="input__required">*</span>
+                </p>
                 <input
                   name=""
                   type="text"
                   placeholder="Введите эл. почту"
                   value=""
+                  required
                 />
               </label>
             </div>
           </div>
           <div
-            class="input input--outline-button-wrapper input--outline input--variant-medium input--with-button input--outline-error"
+            class="input input--outline-button-wrapper input--outline input--variant-medium input--with-button"
           >
             <label for="password">
-              <p class="input__label">Пароль</p>
+              <p class="input__label">
+                Пароль <span class="input__required">*</span>
+              </p>
             </label>
 
             <div class="input__base">
@@ -273,9 +278,14 @@
                 type="password"
                 placeholder="Введите пароль"
                 value=""
+                required
               />
               <div class="input__outline-button">
-                <button type="button" class="input__icon-button">
+                <button
+                  type="button"
+                  class="input__icon-button"
+                  title="Показать пароль"
+                >
                   <div class="icon-eye">
                     <svg
                       width="19"
@@ -291,8 +301,6 @@
                 </button>
               </div>
             </div>
-
-            <p class="input__error-message">Пароли не совпадают</p>
           </div>
           <div class="modal__form-actions">
             <button class="button button--variant-medium" type="button">

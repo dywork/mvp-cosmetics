@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-    <link rel="stylesheet" href="styles/normalize.css" />
-    <link rel="stylesheet" href="styles/fonts.css" />
-    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="../styles/normalize.css" />
+    <link rel="stylesheet" href="../styles/fonts.css" />
+    <link rel="stylesheet" href="../styles/global.css" />
   </head>
   <body>
     <header class="page-header">
@@ -63,7 +63,7 @@
                         <img
                           width="50"
                           height="50"
-                          src="assets/img/profile-img-example.jpg"
+                          src="../assets/img/profile-img-example.jpg"
                           alt="seller-avatar"
                         />
                       </div>
@@ -108,7 +108,7 @@
                         <img
                           width="50"
                           height="50"
-                          src="assets/img/profile-img-example.jpg"
+                          src="../assets/img/profile-img-example.jpg"
                           alt="seller-avatar"
                         />
                       </div>
@@ -153,7 +153,7 @@
                         <img
                           width="50"
                           height="50"
-                          src="assets/img/profile-img-example.jpg"
+                          src="../assets/img/profile-img-example.jpg"
                           alt="seller-avatar"
                         />
                       </div>
@@ -198,7 +198,7 @@
                         <img
                           width="50"
                           height="50"
-                          src="assets/img/profile-img-example.jpg"
+                          src="../assets/img/profile-img-example.jpg"
                           alt="seller-avatar"
                         />
                       </div>
@@ -244,62 +244,138 @@
 
     <div class="modal">
       <div class="modal__wrapper">
-        <h2 class="modal__title">Вход</h2>
+        <h2 class="modal__title">Регистрация</h2>
         <form>
           <div class="modal__form-element">
             <div class="input input--outline input--variant-medium">
               <label>
-                <p class="input__label">Эл. Почта</p>
+                <p class="input__label">
+                  Эл. Почта <span class="input__required">*</span>
+                </p>
                 <input
                   name=""
                   type="text"
+                  placeholder="Введите эл. почту"
+                  value=""
+                  required
+                />
+              </label>
+            </div>
+          </div>
+          <div class="modal__form-element">
+            <div
+              class="input input--outline-button-wrapper input--outline input--variant-medium input--with-button"
+            >
+              <label for="password">
+                <p class="input__label">
+                  Пароль <span class="input__required">*</span>
+                </p>
+              </label>
+
+              <div class="input__base">
+                <input
+                  name=""
+                  id="password"
+                  type="text"
+                  placeholder="Введите пароль"
+                  value=""
+                  required
+                />
+                <div class="input__outline-button">
+                  <button
+                    type="button"
+                    class="input__icon-button"
+                    title="Показать пароль"
+                  >
+                    <div class="icon-eye-opened">
+                      <svg
+                        width="19"
+                        height="19"
+                        viewBox="0 0 19 19"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M9.49984 7.125C8.86995 7.125 8.26586 7.37522 7.82046 7.82062C7.37506 8.26602 7.12484 8.87011 7.12484 9.5C7.12484 10.1299 7.37506 10.734 7.82046 11.1794C8.26586 11.6248 8.86995 11.875 9.49984 11.875C10.1297 11.875 10.7338 11.6248 11.1792 11.1794C11.6246 10.734 11.8748 10.1299 11.8748 9.5C11.8748 8.87011 11.6246 8.26602 11.1792 7.82062C10.7338 7.37522 10.1297 7.125 9.49984 7.125ZM9.49984 13.4583C8.45002 13.4583 7.4432 13.0413 6.70087 12.299C5.95854 11.5566 5.5415 10.5498 5.5415 9.5C5.5415 8.45018 5.95854 7.44337 6.70087 6.70104C7.4432 5.9587 8.45002 5.54167 9.49984 5.54167C10.5497 5.54167 11.5565 5.9587 12.2988 6.70104C13.0411 7.44337 13.4582 8.45018 13.4582 9.5C13.4582 10.5498 13.0411 11.5566 12.2988 12.299C11.5565 13.0413 10.5497 13.4583 9.49984 13.4583ZM9.49984 3.5625C5.5415 3.5625 2.16109 6.02458 0.791504 9.5C2.16109 12.9754 5.5415 15.4375 9.49984 15.4375C13.4582 15.4375 16.8386 12.9754 18.2082 9.5C16.8386 6.02458 13.4582 3.5625 9.49984 3.5625Z"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal__form-element">
+            <div
+              class="input input--outline-button-wrapper input--outline input--variant-medium input--with-button input--outline-error"
+            >
+              <label for="repeatPassword">
+                <p class="input__label">
+                  Повторите пароль <span class="input__required">*</span>
+                </p>
+              </label>
+
+              <div class="input__base">
+                <input
+                  name=""
+                  id="repeatPassword"
+                  type="password"
+                  placeholder="Введите пароль"
+                  value=""
+                  required
+                />
+                <div class="input__outline-button">
+                  <button
+                    type="button"
+                    class="input__icon-button"
+                    title="Показать пароль"
+                  >
+                    <div class="icon-eye">
+                      <svg
+                        width="19"
+                        height="20"
+                        viewBox="0 0 19 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M17.3982 12.5234C17.4567 12.625 17.4946 12.7371 17.5097 12.8533C17.5249 12.9695 17.517 13.0876 17.4866 13.2007C17.4561 13.3139 17.4036 13.4199 17.3322 13.5128C17.2607 13.6057 17.1717 13.6836 17.0701 13.7421C16.9686 13.8006 16.8565 13.8385 16.7403 13.8537C16.6241 13.8688 16.506 13.861 16.3929 13.8305C16.2797 13.8 16.1736 13.7476 16.0808 13.6761C15.9879 13.6047 15.9099 13.5156 15.8515 13.4141L14.6001 11.2246C13.9019 11.6639 13.1491 12.0097 12.361 12.2533L12.7536 14.6016C12.7922 14.8345 12.7367 15.0733 12.5994 15.2653C12.462 15.4574 12.254 15.5871 12.021 15.6258C11.972 15.6345 11.9224 15.6387 11.8726 15.6384C11.6623 15.6382 11.4588 15.5636 11.2983 15.4277C11.1377 15.2919 11.0304 15.1036 10.9953 14.8962L10.6131 12.6103C9.87171 12.6924 9.1235 12.6924 8.38209 12.6103L8.00358 14.8984C7.96848 15.1061 7.86096 15.2946 7.70008 15.4304C7.53921 15.5663 7.3354 15.6408 7.12483 15.6406C7.07507 15.641 7.02538 15.6367 6.97639 15.628C6.86103 15.6086 6.75063 15.5666 6.65149 15.5045C6.55235 15.4424 6.46642 15.3614 6.3986 15.2661C6.33078 15.1708 6.28241 15.063 6.25624 14.949C6.23006 14.835 6.22661 14.7169 6.24608 14.6016L6.63869 12.2474C5.85056 12.0038 5.09776 11.6579 4.39952 11.2187L3.14819 13.4141C3.08971 13.5156 3.0118 13.6047 2.9189 13.6761C2.82601 13.7476 2.71996 13.8 2.60679 13.8305C2.49363 13.861 2.37557 13.8688 2.25936 13.8537C2.14316 13.8385 2.03107 13.8006 1.92952 13.7421C1.82796 13.6836 1.73891 13.6057 1.66746 13.5128C1.59601 13.4199 1.54356 13.3139 1.5131 13.2007C1.48263 13.0876 1.47476 12.9695 1.48992 12.8533C1.50509 12.7371 1.54299 12.625 1.60147 12.5234L2.96858 10.1373C2.50528 9.71881 2.0757 9.26442 1.68385 8.77837C1.54554 8.5939 1.48416 8.36297 1.51262 8.13417C1.54107 7.90537 1.65716 7.69652 1.83645 7.55155C2.01573 7.40658 2.24426 7.33679 2.47395 7.35686C2.70364 7.37693 2.9166 7.48529 3.06803 7.65915C4.2585 9.13314 6.34108 10.8906 9.49983 10.8906C12.6586 10.8906 14.7412 9.13314 15.9316 7.65915C16.0806 7.47716 16.2955 7.36148 16.5295 7.33737C16.7634 7.31326 16.9974 7.38267 17.1804 7.53045C17.3634 7.67824 17.4805 7.8924 17.5061 8.1262C17.5317 8.35999 17.4639 8.59444 17.3173 8.77837C16.925 9.26448 16.4949 9.71887 16.0311 10.1373L17.3982 12.5234Z"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+
+              <p class="input__error-message">Пароли не совпадают</p>
+            </div>
+          </div>
+
+          <div class="modal__form-element">
+            <div class="input input--outline input--variant-medium">
+              <label>
+                <p class="input__label">Номер телефона</p>
+                <input
+                  name=""
+                  type="number"
                   placeholder="Введите эл. почту"
                   value=""
                 />
               </label>
             </div>
           </div>
-          <div
-            class="input input--outline-button-wrapper input--outline input--variant-medium input--with-button input--outline-error"
-          >
-            <label for="password">
-              <p class="input__label">Пароль</p>
+
+          <div class="checkbox">
+            <input type="checkbox" id="checkTerms" />
+            <label for="checkTerms">
+              Я ознакомлен и согласен с условиями
+              <a href="path/to/terms" class="main-link"
+                >пользовательского соглашения</a
+              >
             </label>
-
-            <div class="input__base">
-              <input
-                name=""
-                id="password"
-                type="password"
-                placeholder="Введите пароль"
-                value=""
-              />
-              <div class="input__outline-button">
-                <button type="button" class="input__icon-button">
-                  <div class="icon-eye">
-                    <svg
-                      width="19"
-                      height="20"
-                      viewBox="0 0 19 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M17.3982 12.5234C17.4567 12.625 17.4946 12.7371 17.5097 12.8533C17.5249 12.9695 17.517 13.0876 17.4866 13.2007C17.4561 13.3139 17.4036 13.4199 17.3322 13.5128C17.2607 13.6057 17.1717 13.6836 17.0701 13.7421C16.9686 13.8006 16.8565 13.8385 16.7403 13.8537C16.6241 13.8688 16.506 13.861 16.3929 13.8305C16.2797 13.8 16.1736 13.7476 16.0808 13.6761C15.9879 13.6047 15.9099 13.5156 15.8515 13.4141L14.6001 11.2246C13.9019 11.6639 13.1491 12.0097 12.361 12.2533L12.7536 14.6016C12.7922 14.8345 12.7367 15.0733 12.5994 15.2653C12.462 15.4574 12.254 15.5871 12.021 15.6258C11.972 15.6345 11.9224 15.6387 11.8726 15.6384C11.6623 15.6382 11.4588 15.5636 11.2983 15.4277C11.1377 15.2919 11.0304 15.1036 10.9953 14.8962L10.6131 12.6103C9.87171 12.6924 9.1235 12.6924 8.38209 12.6103L8.00358 14.8984C7.96848 15.1061 7.86096 15.2946 7.70008 15.4304C7.53921 15.5663 7.3354 15.6408 7.12483 15.6406C7.07507 15.641 7.02538 15.6367 6.97639 15.628C6.86103 15.6086 6.75063 15.5666 6.65149 15.5045C6.55235 15.4424 6.46642 15.3614 6.3986 15.2661C6.33078 15.1708 6.28241 15.063 6.25624 14.949C6.23006 14.835 6.22661 14.7169 6.24608 14.6016L6.63869 12.2474C5.85056 12.0038 5.09776 11.6579 4.39952 11.2187L3.14819 13.4141C3.08971 13.5156 3.0118 13.6047 2.9189 13.6761C2.82601 13.7476 2.71996 13.8 2.60679 13.8305C2.49363 13.861 2.37557 13.8688 2.25936 13.8537C2.14316 13.8385 2.03107 13.8006 1.92952 13.7421C1.82796 13.6836 1.73891 13.6057 1.66746 13.5128C1.59601 13.4199 1.54356 13.3139 1.5131 13.2007C1.48263 13.0876 1.47476 12.9695 1.48992 12.8533C1.50509 12.7371 1.54299 12.625 1.60147 12.5234L2.96858 10.1373C2.50528 9.71881 2.0757 9.26442 1.68385 8.77837C1.54554 8.5939 1.48416 8.36297 1.51262 8.13417C1.54107 7.90537 1.65716 7.69652 1.83645 7.55155C2.01573 7.40658 2.24426 7.33679 2.47395 7.35686C2.70364 7.37693 2.9166 7.48529 3.06803 7.65915C4.2585 9.13314 6.34108 10.8906 9.49983 10.8906C12.6586 10.8906 14.7412 9.13314 15.9316 7.65915C16.0806 7.47716 16.2955 7.36148 16.5295 7.33737C16.7634 7.31326 16.9974 7.38267 17.1804 7.53045C17.3634 7.67824 17.4805 7.8924 17.5061 8.1262C17.5317 8.35999 17.4639 8.59444 17.3173 8.77837C16.925 9.26448 16.4949 9.71887 16.0311 10.1373L17.3982 12.5234Z"
-                      />
-                    </svg>
-                  </div>
-                </button>
-              </div>
-            </div>
-
-            <p class="input__error-message">Пароли не совпадают</p>
           </div>
+
           <div class="modal__form-actions">
-            <button class="button button--variant-medium" type="button">
-              Войти
-            </button>
-            <button class="button button--variant-medium" type="button">
-              Регистрация
+            <button class="button button--variant-medium" type="submit">
+              Зарегистрироваться
             </button>
           </div>
         </form>
