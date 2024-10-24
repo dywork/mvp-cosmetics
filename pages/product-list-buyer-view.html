@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product List View Product</title>
+    <title>Product List Buyer View</title>
 
     <link rel="stylesheet" href="../styles/normalize.css" />
     <link rel="stylesheet" href="../styles/fonts.css" />
@@ -92,7 +92,7 @@
     <main>
       <div class="container">
         <div class="page-layout">
-          <h2 class="page-layout__title">Ваш профиль продавца</h2>
+          <h2 class="page-layout__title">Профиль продавца</h2>
 
           <div class="page-layout__header-cards">
             <div class="column-xs">
@@ -116,45 +116,10 @@
             <div class="column-sm">
               <section class="category-card">
                 <div class="category-card__title-wrap">
-                  <h3 class="category-card__title">Ваши категории</h3>
-                  <button class="button-radio-icon" type="button">
-                    <div class="icon-edit">
-                      <svg
-                        width="15"
-                        height="15"
-                        viewBox="0 0 15 15"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M7.12465 11.3506L11.7471 6.72807C10.9694 6.40337 10.2631 5.92896 9.6684 5.33182C9.07098 4.73696 8.59635 4.03043 8.27152 3.25245L3.64902 7.87495C3.2884 8.23557 3.10777 8.4162 2.95277 8.61495C2.76971 8.8495 2.61275 9.10328 2.48465 9.37182C2.37652 9.59932 2.2959 9.84182 2.13465 10.3256L1.2834 12.8774C1.24422 12.9943 1.2384 13.1197 1.26661 13.2397C1.29482 13.3597 1.35592 13.4694 1.44307 13.5565C1.53021 13.6437 1.63992 13.7048 1.75989 13.733C1.87985 13.7612 2.0053 13.7554 2.12215 13.7162L4.67402 12.8649C5.1584 12.7037 5.40027 12.6231 5.62777 12.5149C5.89652 12.3868 6.15027 12.2299 6.38465 12.0468C6.5834 11.8918 6.76402 11.7112 7.12465 11.3506ZM13.0296 5.44557C13.4905 4.98468 13.7495 4.35957 13.7495 3.70776C13.7495 3.05595 13.4905 2.43084 13.0296 1.96995C12.5687 1.50905 11.9436 1.25012 11.2918 1.25012C10.64 1.25012 10.0149 1.50905 9.55402 1.96995L8.99965 2.52432L9.0234 2.5937C9.29659 3.3754 9.74366 4.08489 10.3309 4.6687C10.9322 5.27351 11.6665 5.72939 12.4753 5.99995L13.0296 5.44557Z"
-                          fill="black"
-                        />
-                      </svg>
-                    </div>
-                  </button>
+                  <h3 class="category-card__title">Категории</h3>
                 </div>
 
                 <div class="category-card__tag-list">
-                  <button class="button-radio-icon" type="button">
-                    <div class="icon-plus">
-                      <svg
-                        width="13"
-                        height="13"
-                        viewBox="0 0 13 13"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M2.7002 6.20001H9.7002M6.2002 2.70001V9.70001"
-                          stroke="black"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </div>
-                  </button>
-
                   <button type="button" class="tag">
                     <span class="tag__text">Косметика</span>
                   </button>
@@ -305,7 +270,7 @@
                 <div class="product-card__footer">
                   <p class="product-card__price">2 500 ₽</p>
                   <button type="button" class="button button--variant-small">
-                    Изменить
+                    В корзину
                   </button>
                 </div>
               </div>
@@ -339,8 +304,111 @@
                 </div>
                 <div class="product-card__footer">
                   <p class="product-card__price">2 500 ₽</p>
+                  <div class="count-selector">
+                    <button
+                      class="button-radio-icon button-radio-icon--variant-l"
+                      type="button"
+                      disabled
+                    >
+                      <div class="icon-plus">
+                        <svg
+                          width="18"
+                          height="17"
+                          viewBox="0 0 18 17"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M12.5355 12.0208C12.423 12.1333 12.2704 12.1965 12.1113 12.1965C11.9521 12.1965 11.7995 12.1333 11.687 12.0208L9 9.33378L6.31299 12.0208C6.20047 12.1333 6.04786 12.1965 5.88873 12.1965C5.7296 12.1965 5.57699 12.1333 5.46447 12.0208C5.35194 11.9083 5.28873 11.7557 5.28873 11.5965C5.28873 11.4374 5.35194 11.2848 5.46447 11.1723L8.15147 8.48525L5.46447 5.79825C5.35194 5.68573 5.28873 5.53311 5.28873 5.37398C5.28873 5.21485 5.35194 5.06224 5.46447 4.94972C5.57699 4.8372 5.7296 4.77398 5.88873 4.77398C6.04786 4.77398 6.20047 4.8372 6.31299 4.94972L9 7.63672L11.687 4.94972C11.7995 4.8372 11.9521 4.77398 12.1113 4.77398C12.2704 4.77398 12.423 4.8372 12.5355 4.94972C12.6481 5.06224 12.7113 5.21485 12.7113 5.37398C12.7113 5.53311 12.6481 5.68573 12.5355 5.79825L9.84853 8.48525L12.5355 11.1723C12.6481 11.2848 12.7113 11.4374 12.7113 11.5965C12.7113 11.7557 12.6481 11.9083 12.5355 12.0208Z"
+                            fill="#7A7A7A"
+                          />
+                        </svg>
+                      </div>
+                    </button>
+                    <p class="count-selector__display">2</p>
+                    <button
+                      class="button-radio-icon button-radio-icon--variant-l"
+                      type="button"
+                    >
+                      <div class="icon-plus">
+                        <svg
+                          width="13"
+                          height="13"
+                          viewBox="0 0 11 13"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M2.7002 6.20001H9.7002M6.2002 2.70001V9.70001"
+                            stroke="black"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="product-card">
+              <div class="product-card__image">
+                <img
+                  width="230"
+                  height="161"
+                  src="../assets/img/product-image.jpg"
+                  alt="product card image"
+                />
+              </div>
+              <div class="product-card__main-info">
+                <div class="product-card__categories">
+                  <button type="button" class="tag tag--variant-small">
+                    <span class="tag__text">Уходовые средства</span>
+                  </button>
+                  <button type="button" class="tag tag--variant-small">
+                    <span class="tag__text">Косметика</span>
+                  </button>
+                  <button type="button" class="tag tag--variant-small">
+                    <span class="tag__text">Уход за лицом</span>
+                  </button>
+
+                  <button
+                    class="button-radio-icon button-radio-icon--variant-small"
+                    type="button"
+                  >
+                    <div class="icon-dotted">
+                      <svg
+                        width="11"
+                        height="11"
+                        viewBox="0 0 11 11"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2 5.5C2 5.63261 2.04609 5.75979 2.12814 5.85355C2.21019 5.94732 2.32147 6 2.4375 6C2.55353 6 2.66481 5.94732 2.74686 5.85355C2.82891 5.75979 2.875 5.63261 2.875 5.5C2.875 5.36739 2.82891 5.24021 2.74686 5.14645C2.66481 5.05268 2.55353 5 2.4375 5C2.32147 5 2.21019 5.05268 2.12814 5.14645C2.04609 5.24021 2 5.36739 2 5.5ZM5.0625 5.5C5.0625 5.63261 5.10859 5.75979 5.19064 5.85355C5.27269 5.94732 5.38397 6 5.5 6C5.61603 6 5.72731 5.94732 5.80936 5.85355C5.89141 5.75979 5.9375 5.63261 5.9375 5.5C5.9375 5.36739 5.89141 5.24021 5.80936 5.14645C5.72731 5.05268 5.61603 5 5.5 5C5.38397 5 5.27269 5.05268 5.19064 5.14645C5.10859 5.24021 5.0625 5.36739 5.0625 5.5ZM8.125 5.5C8.125 5.63261 8.17109 5.75979 8.25314 5.85355C8.33519 5.94732 8.44647 6 8.5625 6C8.67853 6 8.78981 5.94732 8.87186 5.85355C8.95391 5.75979 9 5.63261 9 5.5C9 5.36739 8.95391 5.24021 8.87186 5.14645C8.78981 5.05268 8.67853 5 8.5625 5C8.44647 5 8.33519 5.05268 8.25314 5.14645C8.17109 5.24021 8.125 5.36739 8.125 5.5Z"
+                          stroke="black"
+                          stroke-width="0.911616"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+                <div class="product-card__text-info">
+                  <h2 class="product-card__title">Название продукта</h2>
+                  <p class="product-card__description">
+                    Описание продукта, его свойств, преимуществ, важных факторов
+                    состав, объём состав, объём состав, объём состав, объём
+                    состав, объём состав, объём состав, объём состав, объём
+                    состав, объём состав, объём
+                  </p>
+                </div>
+                <div class="product-card__footer">
+                  <p class="product-card__price">2 500 ₽</p>
                   <button type="button" class="button button--variant-small">
-                    Изменить
+                    В корзину
                   </button>
                 </div>
               </div>
@@ -402,69 +470,7 @@
                 <div class="product-card__footer">
                   <p class="product-card__price">2 500 ₽</p>
                   <button type="button" class="button button--variant-small">
-                    Изменить
-                  </button>
-                </div>
-              </div>
-            </section>
-
-            <section class="product-card">
-              <div class="product-card__image">
-                <img
-                  width="230"
-                  height="161"
-                  src="../assets/img/product-image.jpg"
-                  alt="product card image"
-                />
-              </div>
-              <div class="product-card__main-info">
-                <div class="product-card__categories">
-                  <button type="button" class="tag tag--variant-small">
-                    <span class="tag__text">Уходовые средства</span>
-                  </button>
-                  <button type="button" class="tag tag--variant-small">
-                    <span class="tag__text">Косметика</span>
-                  </button>
-                  <button type="button" class="tag tag--variant-small">
-                    <span class="tag__text">Уход за лицом</span>
-                  </button>
-
-                  <button
-                    class="button-radio-icon button-radio-icon--variant-small"
-                    type="button"
-                  >
-                    <div class="icon-dotted">
-                      <svg
-                        width="11"
-                        height="11"
-                        viewBox="0 0 11 11"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M2 5.5C2 5.63261 2.04609 5.75979 2.12814 5.85355C2.21019 5.94732 2.32147 6 2.4375 6C2.55353 6 2.66481 5.94732 2.74686 5.85355C2.82891 5.75979 2.875 5.63261 2.875 5.5C2.875 5.36739 2.82891 5.24021 2.74686 5.14645C2.66481 5.05268 2.55353 5 2.4375 5C2.32147 5 2.21019 5.05268 2.12814 5.14645C2.04609 5.24021 2 5.36739 2 5.5ZM5.0625 5.5C5.0625 5.63261 5.10859 5.75979 5.19064 5.85355C5.27269 5.94732 5.38397 6 5.5 6C5.61603 6 5.72731 5.94732 5.80936 5.85355C5.89141 5.75979 5.9375 5.63261 5.9375 5.5C5.9375 5.36739 5.89141 5.24021 5.80936 5.14645C5.72731 5.05268 5.61603 5 5.5 5C5.38397 5 5.27269 5.05268 5.19064 5.14645C5.10859 5.24021 5.0625 5.36739 5.0625 5.5ZM8.125 5.5C8.125 5.63261 8.17109 5.75979 8.25314 5.85355C8.33519 5.94732 8.44647 6 8.5625 6C8.67853 6 8.78981 5.94732 8.87186 5.85355C8.95391 5.75979 9 5.63261 9 5.5C9 5.36739 8.95391 5.24021 8.87186 5.14645C8.78981 5.05268 8.67853 5 8.5625 5C8.44647 5 8.33519 5.05268 8.25314 5.14645C8.17109 5.24021 8.125 5.36739 8.125 5.5Z"
-                          stroke="black"
-                          stroke-width="0.911616"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </div>
-                  </button>
-                </div>
-                <div class="product-card__text-info">
-                  <h2 class="product-card__title">Название продукта</h2>
-                  <p class="product-card__description">
-                    Описание продукта, его свойств, преимуществ, важных факторов
-                    состав, объём состав, объём состав, объём состав, объём
-                    состав, объём состав, объём состав, объём состав, объём
-                    состав, объём состав, объём
-                  </p>
-                </div>
-                <div class="product-card__footer">
-                  <p class="product-card__price">2 500 ₽</p>
-                  <button type="button" class="button button--variant-small">
-                    Изменить
+                    В корзину
                   </button>
                 </div>
               </div>
@@ -525,7 +531,7 @@
                 <div class="product-card__footer">
                   <p class="product-card__price">2 500 ₽</p>
                   <button type="button" class="button button--variant-small">
-                    Изменить
+                    В корзину
                   </button>
                 </div>
               </div>
@@ -586,7 +592,7 @@
                 <div class="product-card__footer">
                   <p class="product-card__price">2 500 ₽</p>
                   <button type="button" class="button button--variant-small">
-                    Изменить
+                    В корзину
                   </button>
                 </div>
               </div>
@@ -647,96 +653,14 @@
                 <div class="product-card__footer">
                   <p class="product-card__price">2 500 ₽</p>
                   <button type="button" class="button button--variant-small">
-                    Изменить
+                    В корзину
                   </button>
                 </div>
               </div>
             </section>
           </div>
         </div>
-      </div>
-
-      <div class="modal">
-        <div
-          class="modal__wrapper modal__wrapper--size-l modal__wrapper--with-scroll"
-        >
-          <div class="scrollbar modal__scroll-wrapper">
-            <div class="product-gallery mb-16">
-              <div class="product-gallery__main-img">
-                <img src="../assets/img/main-gallery.jpg" />
-              </div>
-
-              <div class="product-gallery__list-img">
-                <button type="button" class="product-gallery__btn-img">
-                  <img src="../assets/img/main-gallery.jpg" />
-                </button>
-                <button type="button" class="product-gallery__btn-img">
-                  <img src="../assets/img/main-gallery.jpg" />
-                </button>
-                <button type="button" class="product-gallery__btn-img">
-                  <img src="../assets/img/main-gallery.jpg" />
-                </button>
-                <button type="button" class="product-gallery__btn-img">
-                  <img src="../assets/img/main-gallery.jpg" />
-                </button>
-              </div>
-            </div>
-
-            <div class="product-tag-list mb-16">
-              <div class="product-tag-list__wrapper scrollbar">
-                <button type="button" class="tag">
-                  <span class="tag__text">Уходовая</span>
-                </button>
-                <button type="button" class="tag">
-                  <span class="tag__text">Увлажнение</span>
-                </button>
-                <button type="button" class="tag">
-                  <span class="tag__text">Косметика</span>
-                </button>
-                <button type="button" class="tag">
-                  <span class="tag__text">Косметика</span>
-                </button>
-                <button type="button" class="tag">
-                  <span class="tag__text">Косметика</span>
-                </button>
-                <button type="button" class="tag">
-                  <span class="tag__text">Косметика</span>
-                </button>
-                <button type="button" class="tag">
-                  <span class="tag__text">Косметика</span>
-                </button>
-                <button type="button" class="tag">
-                  <span class="tag__text">Косметика</span>
-                </button>
-                <button type="button" class="tag">
-                  <span class="tag__text">Косметика</span>
-                </button>
-              </div>
-            </div>
-            <h2 class="modal__title modal__title--variant-medium">Шампунь</h2>
-            <p class="product-description">
-              Шампунь для светлых, окрашенных волос поддерживает холодные
-              оттенки окрашенных светлых волос, нейтрализуя желтые и медные
-              тона, придает волосам блеск и мягкость.
-            </p>
-            <p class="product-description">
-              Эффективная формула бережно очищает, интенсивно увлажняет
-              и укрепляет волосы по всей длине.
-            </p>
-
-            <div class="modal__form-actions">
-              <button class="button" type="submit">В корзину</button>
-              <p class="product-price mr-auto">2 500 ₽</p>
-            </div>
-          </div>
-        </div>
-        <div class="modal__overlay"></div>
       </div>
     </main>
-
-    <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@editorjs/list@latest"></script>
-    <script src="../libs/editor-js/init.js"></script>
   </body>
 </html>
