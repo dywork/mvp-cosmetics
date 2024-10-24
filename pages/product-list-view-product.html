@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product List View Product</title>
+
+    <link rel="stylesheet" href="../styles/normalize.css" />
+    <link rel="stylesheet" href="../styles/fonts.css" />
+    <link rel="stylesheet" href="../styles/global.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="page-header__container">
+        <div class="page-header__search">
+          <div class="input input--with-button">
+            <input
+              name=""
+              type="text"
+              placeholder="Поиск у продавца..."
+              value=""
+            />
+
+            <div class="input__button">
+              <button class="button button--variant-medium">Найти</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="page-header__action-btns">
+          <a href="path/to/basket" title="Корзина">
+            <div class="icon icon-basket">
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M13.08 4.10253C13.3037 3.83416 13.5811 3.61566 13.8945 3.46112C14.2078 3.30657 14.5501 3.21943 14.8992 3.20529C15.2483 3.19116 15.5965 3.25036 15.9213 3.37906C16.2461 3.50777 16.5403 3.70312 16.785 3.95253L16.92 4.10253L21.835 10H25.5662C25.8285 9.99948 26.088 10.0543 26.3277 10.161C26.5673 10.2677 26.7817 10.4238 26.9568 10.6191C27.132 10.8144 27.2639 11.0445 27.3439 11.2944C27.4239 11.5442 27.4503 11.8081 27.4212 12.0688L27.3062 13.0263L27.1812 13.9513L27.0787 14.6438L26.96 15.3875L26.825 16.1688L26.6725 16.9788L26.5025 17.805C26.4125 18.2217 26.3158 18.638 26.2125 19.0538C25.9358 20.1513 25.5884 21.2298 25.1725 22.2825L24.8962 22.9575L24.6287 23.5675L24.3762 24.11L24.2587 24.3525L23.9475 24.965C23.5475 25.7275 22.7925 26.1775 21.9937 26.2425L21.7937 26.25H8.19372C7.75672 26.2533 7.32704 26.1378 6.95056 25.9159C6.57409 25.694 6.26497 25.374 6.05622 24.99L5.76622 24.4275L5.54122 23.965L5.42247 23.7088L5.17247 23.1475C4.60159 21.8219 4.13842 20.4525 3.78747 19.0525C3.7196 18.7807 3.6546 18.5082 3.59247 18.235L3.41497 17.425L3.25622 16.6325L3.11622 15.8663L2.99122 15.1325L2.88247 14.44L2.78997 13.7988L2.67747 12.945L2.59497 12.25L2.57372 12.0588C2.54786 11.8132 2.57109 11.5649 2.64207 11.3284C2.71305 11.0919 2.83034 10.8719 2.98714 10.6811C3.14394 10.4903 3.33711 10.3327 3.55541 10.2172C3.77371 10.1018 4.01278 10.031 4.25872 10.0088L4.42872 10H8.16497L13.08 4.10253ZM12.4512 15.9025C12.3667 15.6076 12.1766 15.3541 11.9172 15.1902C11.6578 15.0264 11.3472 14.9636 11.0445 15.014C10.7419 15.0643 10.4683 15.2242 10.2759 15.4632C10.0835 15.7022 9.98575 16.0036 10.0012 16.31L10.0175 16.455L10.6425 20.205L10.6737 20.3475C10.7583 20.6425 10.9483 20.896 11.2077 21.0598C11.4671 21.2237 11.7777 21.2864 12.0804 21.2361C12.383 21.1857 12.6566 21.0259 12.849 20.7869C13.0414 20.5479 13.1392 20.2465 13.1237 19.94L13.1075 19.795L12.4825 16.045L12.4512 15.9025ZM18.955 15.0175C18.6528 14.9671 18.3427 15.0294 18.0835 15.1926C17.8243 15.3557 17.634 15.6083 17.5487 15.9025L17.5175 16.045L16.8925 19.795C16.8403 20.1095 16.9102 20.4321 17.088 20.6967C17.2658 20.9613 17.538 21.148 17.8489 21.2186C18.1598 21.2892 18.4859 21.2383 18.7605 21.0764C19.0351 20.9145 19.2375 20.6537 19.3262 20.3475L19.3575 20.205L19.9825 16.455C20.0367 16.1282 19.9589 15.7932 19.7662 15.5236C19.5736 15.2541 19.2818 15.072 18.955 15.0175ZM15 5.70253L11.4187 10H18.5812L15 5.70253Z"
+                />
+              </svg>
+            </div>
+          </a>
+          <a href="path/to/orders" title="Заказы">
+            <div class="icon order-icon">
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.5675 4.66497L19.9631 9.97685L15 12.1031L2.67563 6.82122C2.95313 6.5381 3.2925 6.30935 3.67875 6.16122L7.5675 4.66497ZM10.0763 3.70122L12.9825 2.58372C14.2818 2.08423 15.7201 2.08423 17.0194 2.58372L26.3231 6.16122C26.7075 6.31122 27.0469 6.53622 27.3244 6.82122L22.3444 8.95497L10.0763 3.70122ZM28.1138 8.52372L15.9375 13.7418V27.7106C16.3062 27.6481 16.6669 27.5493 17.0194 27.4143L26.3231 23.835C26.8535 23.6307 27.3096 23.2706 27.6313 22.802C27.9529 22.3334 28.1251 21.7783 28.125 21.21V8.78622C28.125 8.69872 28.1206 8.61122 28.1119 8.52372M14.0625 27.7106V13.7418L1.88812 8.52372C1.88068 8.61104 1.87631 8.6986 1.875 8.78622V21.21C1.87508 21.7786 2.04749 22.3338 2.3695 22.8024C2.69151 23.271 3.14799 23.631 3.67875 23.835L12.9806 27.4143C13.3331 27.5493 13.6938 27.6481 14.0625 27.7106Z"
+                />
+              </svg>
+            </div>
+          </a>
+          <button class="button-icon" title="Уведомления">
+            <div class="icon notification-icon">
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M25.7858 19.9986C25.6885 19.8814 25.593 19.7643 25.4993 19.6512C24.2102 18.092 23.4303 17.151 23.4303 12.7371C23.4303 10.452 22.8837 8.57695 21.8061 7.1707C21.0116 6.13184 19.9376 5.34375 18.5219 4.76133C18.5037 4.75119 18.4875 4.7379 18.4739 4.72207C17.9647 3.01699 16.5714 1.875 14.9999 1.875C13.4284 1.875 12.0356 3.01699 11.5264 4.72031C11.5129 4.73559 11.4968 4.74846 11.479 4.7584C8.17546 6.11836 6.56999 8.72754 6.56999 12.7354C6.56999 17.151 5.79128 18.092 4.50104 19.6494C4.40729 19.7625 4.31178 19.8773 4.21452 19.9969C3.96327 20.2999 3.80408 20.6685 3.7558 21.0592C3.70751 21.4498 3.77215 21.8461 3.94206 22.2012C4.30358 22.9629 5.07409 23.4357 5.95358 23.4357H24.0526C24.928 23.4357 25.6932 22.9635 26.0559 22.2053C26.2266 21.8501 26.2918 21.4535 26.2439 21.0624C26.1961 20.6713 26.0371 20.3021 25.7858 19.9986ZM14.9999 28.125C15.8466 28.1243 16.6773 27.8945 17.4039 27.4599C18.1306 27.0253 18.7261 26.4021 19.1272 25.6564C19.1461 25.6207 19.1554 25.5807 19.1543 25.5403C19.1532 25.4999 19.1416 25.4605 19.1207 25.4258C19.0999 25.3912 19.0704 25.3626 19.0352 25.3427C19 25.3229 18.9602 25.3125 18.9198 25.3125H11.0811C11.0406 25.3124 11.0008 25.3227 10.9655 25.3425C10.9302 25.3623 10.9007 25.391 10.8797 25.4256C10.8588 25.4602 10.8472 25.4997 10.846 25.5401C10.8449 25.5806 10.8542 25.6207 10.8731 25.6564C11.2742 26.402 11.8696 27.0251 12.5961 27.4597C13.3227 27.8943 14.1533 28.1242 14.9999 28.125Z"
+                />
+              </svg>
+            </div>
+          </button>
+        </div>
+
+        <div class="page-header__profile">
+          <div class="profile">
+            <button class="profile__button">
+              <img
+                width="52"
+                height="52"
+                src="../assets/img/profile-img-example.jpg"
+                alt="profile"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="page-layout">
+          <h2 class="page-layout__title">Ваш профиль продавца</h2>
+
+          <div class="page-layout__header-cards">
+            <div class="column-xs">
+              <section class="profile-card">
+                <div class="profile-card__avatar">
+                  <img
+                    width="98"
+                    height="98"
+                    src="../assets/img/profile-img-example.jpg"
+                    alt="profile avatar"
+                  />
+                </div>
+                <div class="profile-card__info">
+                  <h3 class="profile-card__title">Затрубицкий Степан</h3>
+                  <p class="profile-card__role">Врач-косметолог</p>
+                  <p class="profile-card__id">ID: 72617281</p>
+                </div>
+              </section>
+            </div>
+
+            <div class="column-sm">
+              <section class="category-card">
+                <div class="category-card__title-wrap">
+                  <h3 class="category-card__title">Ваши категории</h3>
+                  <button class="button-radio-icon" type="button">
+                    <div class="icon-edit">
+                      <svg
+                        width="15"
+                        height="15"
+                        viewBox="0 0 15 15"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7.12465 11.3506L11.7471 6.72807C10.9694 6.40337 10.2631 5.92896 9.6684 5.33182C9.07098 4.73696 8.59635 4.03043 8.27152 3.25245L3.64902 7.87495C3.2884 8.23557 3.10777 8.4162 2.95277 8.61495C2.76971 8.8495 2.61275 9.10328 2.48465 9.37182C2.37652 9.59932 2.2959 9.84182 2.13465 10.3256L1.2834 12.8774C1.24422 12.9943 1.2384 13.1197 1.26661 13.2397C1.29482 13.3597 1.35592 13.4694 1.44307 13.5565C1.53021 13.6437 1.63992 13.7048 1.75989 13.733C1.87985 13.7612 2.0053 13.7554 2.12215 13.7162L4.67402 12.8649C5.1584 12.7037 5.40027 12.6231 5.62777 12.5149C5.89652 12.3868 6.15027 12.2299 6.38465 12.0468C6.5834 11.8918 6.76402 11.7112 7.12465 11.3506ZM13.0296 5.44557C13.4905 4.98468 13.7495 4.35957 13.7495 3.70776C13.7495 3.05595 13.4905 2.43084 13.0296 1.96995C12.5687 1.50905 11.9436 1.25012 11.2918 1.25012C10.64 1.25012 10.0149 1.50905 9.55402 1.96995L8.99965 2.52432L9.0234 2.5937C9.29659 3.3754 9.74366 4.08489 10.3309 4.6687C10.9322 5.27351 11.6665 5.72939 12.4753 5.99995L13.0296 5.44557Z"
+                          fill="black"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+
+                <div class="category-card__tag-list">
+                  <button class="button-radio-icon" type="button">
+                    <div class="icon-plus">
+                      <svg
+                        width="13"
+                        height="13"
+                        viewBox="0 0 13 13"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2.7002 6.20001H9.7002M6.2002 2.70001V9.70001"
+                          stroke="black"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+
+                  <button type="button" class="tag">
+                    <span class="tag__text">Косметика</span>
+                  </button>
+                  <button type="button" class="tag">
+                    <span class="tag__text">Филлеры</span>
+                  </button>
+                  <button type="button" class="tag tag--filled">
+                    <span class="tag__text">Уходовая</span>
+                  </button>
+                  <button type="button" class="tag">
+                    <span class="tag__text">Массаж</span>
+                  </button>
+                  <button type="button" class="tag">
+                    <span class="tag__text">Сыворотки</span>
+                  </button>
+                  <button type="button" class="tag">
+                    <span class="tag__text">Увлажнение</span>
+                  </button>
+                  <button type="button" class="tag tag--filled">
+                    <span class="tag__text">Маски для волос</span>
+                  </button>
+                  <button type="button" class="tag">
+                    <span class="tag__text">Всё</span>
+                    <div class="tag__right-adornment">
+                      <div class="icon-down-arrow">
+                        <svg
+                          width="11"
+                          height="10"
+                          viewBox="0 0 11 10"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9.25009 2.08335L1.75009 2.08335C1.67415 2.08359 1.59972 2.10453 1.53481 2.14392C1.46989 2.18332 1.41694 2.23967 1.38167 2.30691C1.3464 2.37416 1.33013 2.44975 1.33463 2.52555C1.33912 2.60135 1.3642 2.67449 1.40717 2.7371L5.15717 8.15377C5.31259 8.37835 5.68675 8.37835 5.84259 8.15377L9.59259 2.7371C9.63599 2.67462 9.66145 2.60145 9.66618 2.52552C9.67092 2.44959 9.65476 2.37382 9.61946 2.30643C9.58415 2.23904 9.53105 2.18262 9.46593 2.14329C9.40081 2.10396 9.32616 2.08323 9.25009 2.08335Z"
+                            fill="black"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <section class="filters">
+            <h3 class="filters__title">Фильтры</h3>
+            <div class="filters__list">
+              <button type="button" class="tag tag--filled">
+                <span class="tag__text">Маски для волос</span>
+
+                <div class="tag__right-adornment">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.83301 5.83334L14.1663 14.1667M5.83301 14.1667L14.1663 5.83334"
+                      stroke="white"
+                      stroke-width="1.97917"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </button>
+              <button type="button" class="tag tag--filled">
+                <span class="tag__text">Уходовая</span>
+
+                <div class="tag__right-adornment">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.83301 5.83334L14.1663 14.1667M5.83301 14.1667L14.1663 5.83334"
+                      stroke="white"
+                      stroke-width="1.97917"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </section>
+
+          <div class="product-list">
+            <button type="button" class="product-list__add-product-card">
+              <svg
+                width="48"
+                height="48"
+                viewBox="0 0 48 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="1"
+                  y="1"
+                  width="46"
+                  height="46"
+                  rx="23"
+                  stroke="#47B4C2"
+                  stroke-width="2"
+                />
+                <path
+                  d="M18.4727 23.5636H28.6545M23.5636 18.4727V28.6545"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              <h3 class="product-list__add-product-card-title">
+                Создать карточку товара
+              </h3>
+            </button>
+
+            <section class="product-card">
+              <div class="product-card__image">
+                <img
+                  width="230"
+                  height="161"
+                  src="../assets/img/product-image.jpg"
+                  alt="product card image"
+                />
+              </div>
+              <div class="product-card__main-info">
+                <div class="product-card__categories">
+                  <button type="button" class="tag tag--variant-small">
+                    <span class="tag__text">Уходовые средства</span>
+                  </button>
+                  <button type="button" class="tag tag--variant-small">
+                    <span class="tag__text">Косметика</span>
+                  </button>
+                  <button type="button" class="tag tag--variant-small">
+                    <span class="tag__text">Уход за лицом</span>
+                  </button>
+
+                  <button
+                    class="button-radio-icon button-radio-icon--variant-small"
+                    type="button"
+                  >
+                    <div class="icon-dotted">
+                      <svg
+                        width="11"
+                        height="11"
+                        viewBox="0 0 11 11"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2 5.5C2 5.63261 2.04609 5.75979 2.12814 5.85355C2.21019 5.94732 2.32147 6 2.4375 6C2.55353 6 2.66481 5.94732 2.74686 5.85355C2.82891 5.75979 2.875 5.63261 2.875 5.5C2.875 5.36739 2.82891 5.24021 2.74686 5.14645C2.66481 5.05268 2.55353 5 2.4375 5C2.32147 5 2.21019 5.05268 2.12814 5.14645C2.04609 5.24021 2 5.36739 2 5.5ZM5.0625 5.5C5.0625 5.63261 5.10859 5.75979 5.19064 5.85355C5.27269 5.94732 5.38397 6 5.5 6C5.61603 6 5.72731 5.94732 5.80936 5.85355C5.89141 5.75979 5.9375 5.63261 5.9375 5.5C5.9375 5.36739 5.89141 5.24021 5.80936 5.14645C5.72731 5.05268 5.61603 5 5.5 5C5.38397 5 5.27269 5.05268 5.19064 5.14645C5.10859 5.24021 5.0625 5.36739 5.0625 5.5ZM8.125 5.5C8.125 5.63261 8.17109 5.75979 8.25314 5.85355C8.33519 5.94732 8.44647 6 8.5625 6C8.67853 6 8.78981 5.94732 8.87186 5.85355C8.95391 5.75979 9 5.63261 9 5.5C9 5.36739 8.95391 5.24021 8.87186 5.14645C8.78981 5.05268 8.67853 5 8.5625 5C8.44647 5 8.33519 5.05268 8.25314 5.14645C8.17109 5.24021 8.125 5.36739 8.125 5.5Z"
+                          stroke="black"
+                          stroke-width="0.911616"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+                <div class="product-card__text-info">
+                  <h2 class="product-card__title">Название продукта</h2>
+                  <p class="product-card__description">
+                    Описание продукта, его свойств, преимуществ, важных факторов
+                    состав, объём состав, объём состав, объём состав, объём
+                    состав, объём состав, объём состав, объём состав, объём
+                    состав, объём состав, объём
+                  </p>
+                </div>
+                <div class="product-card__footer">
+                  <p class="product-card__price">2 500 ₽</p>
+                  <button type="button" class="button button--variant-small">
+                    Изменить
+                  </button>
+                </div>
+              </div>
+            </section>
+
+            <section class="product-card">
+              <div class="product-card__image">
+                <img
+                  width="230"
+                  height="161"
+                  src="../assets/img/product-image.jpg"
+                  alt="product card image"
+                />
+              </div>
+              <div class="product-card__main-info">
+                <div class="product-card__text-info">
+                  <h2 class="product-card__title">Название продукта</h2>
+                  <p
+                    class="product-card__description product-card__description--without-tags"
+                  >
+                    Описание продукта, его свойств, преимуществ, важных факторов
+                    состав, объём Описание продукта, его свойств, преимуществ,
+                    важных факторов состав, объём состав, объём состав, объём
+                    состав, объём состав, объём состав, объём состав, объём
+                    состав, объём состав, объём состав, объём Описание продукта,
+                    его свойств, преимуществ, важных факторов состав, объём
+                    состав, объём состав, объём состав, объём состав, объём
+                    состав, объём состав, объём состав, объём состав, объём
+                    состав, объём
+                  </p>
+                </div>
+                <div class="product-card__footer">
+                  <p class="product-card__price">2 500 ₽</p>
+                  <button type="button" class="button button--variant-small">
+                    Изменить
+                  </button>
+                </div>
+              </div>
+            </section>
+
+            <section class="product-card">
+              <div class="product-card__image">
+                <img
+                  width="230"
+                  height="161"
+                  src="../assets/img/product-image.jpg"
+                  alt="product card image"
+                />
+              </div>
+              <div class="product-card__main-info">
+                <div class="product-card__categories">
+                  <button type="button" class="tag tag--variant-small">
+                    <span class="tag__text">Уходовые средства</span>
+                  </button>
+                  <button type="button" class="tag tag--variant-small">
+                    <span class="tag__text">Косметика</span>
+                  </button>
+                  <button type="button" class="tag tag--variant-small">
+                    <span class="tag__text">Уход за лицом</span>
+                  </button>
+
+                  <button
+                    class="button-radio-icon button-radio-icon--variant-small"
+                    type="button"
+                  >
+                    <div class="icon-dotted">
+                      <svg
+                        width="11"
+                        height="11"
+                        viewBox="0 0 11 11"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2 5.5C2 5.63261 2.04609 5.75979 2.12814 5.85355C2.21019 5.94732 2.32147 6 2.4375 6C2.55353 6 2.66481 5.94732 2.74686 5.85355C2.82891 5.75979 2.875 5.63261 2.875 5.5C2.875 5.36739 2.82891 5.24021 2.74686 5.14645C2.66481 5.05268 2.55353 5 2.4375 5C2.32147 5 2.21019 5.05268 2.12814 5.14645C2.04609 5.24021 2 5.36739 2 5.5ZM5.0625 5.5C5.0625 5.63261 5.10859 5.75979 5.19064 5.85355C5.27269 5.94732 5.38397 6 5.5 6C5.61603 6 5.72731 5.94732 5.80936 5.85355C5.89141 5.75979 5.9375 5.63261 5.9375 5.5C5.9375 5.36739 5.89141 5.24021 5.80936 5.14645C5.72731 5.05268 5.61603 5 5.5 5C5.38397 5 5.27269 5.05268 5.19064 5.14645C5.10859 5.24021 5.0625 5.36739 5.0625 5.5ZM8.125 5.5C8.125 5.63261 8.17109 5.75979 8.25314 5.85355C8.33519 5.94732 8.44647 6 8.5625 6C8.67853 6 8.78981 5.94732 8.87186 5.85355C8.95391 5.75979 9 5.63261 9 5.5C9 5.36739 8.95391 5.24021 8.87186 5.14645C8.78981 5.05268 8.67853 5 8.5625 5C8.44647 5 8.33519 5.05268 8.25314 5.14645C8.17109 5.24021 8.125 5.36739 8.125 5.5Z"
+                          stroke="black"
+                          stroke-width="0.911616"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+                <div class="product-card__text-info">
+                  <h2 class="product-card__title">Название продукта</h2>
+                  <p class="product-card__description">
+                    Описание продукта, его свойств, преимуществ, важных факторов
+                    состав, объём состав, объём состав, объём состав, объём
+                    состав, объём состав, объём состав, объём состав, объём
+                    состав, объём состав, объём
+                  </p>
+                </div>
+                <div class="product-card__footer">
+                  <p class="product-card__price">2 500 ₽</p>
+                  <button type="button" class="button button--variant-small">
+                    Изменить
+                  </button>
+                </div>
+              </div>
+            </section>
+
+            <section class="product-card">
+              <div class="product-card__image">
+                <img
+                  width="230"
+                  height="161"
+                  src="../assets/img/product-image.jpg"
+                  alt="product card image"
+                />
+              </div>
+              <div class="product-card__main-info">
+                <div class="product-card__categories">
+                  <button type="button" class="tag tag--variant-small">
+                    <span class="tag__text">Уходовые средства</span>
+                  </button>
+                  <button type="button" class="tag tag--variant-small">
+                    <span class="tag__text">Косметика</span>
+                  </button>
+                  <button type="button" class="tag tag--variant-small">
+                    <span class="tag__text">Уход за лицом</span>
+                  </button>
+
+                  <button
+                    class="button-radio-icon button-radio-icon--variant-small"
+                    type="button"
+                  >
+                    <div class="icon-dotted">
+                      <svg
+                        width="11"
+                        height="11"
+                        viewBox="0 0 11 11"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2 5.5C2 5.63261 2.04609 5.75979 2.12814 5.85355C2.21019 5.94732 2.32147 6 2.4375 6C2.55353 6 2.66481 5.94732 2.74686 5.85355C2.82891 5.75979 2.875 5.63261 2.875 5.5C2.875 5.36739 2.82891 5.24021 2.74686 5.14645C2.66481 5.05268 2.55353 5 2.4375 5C2.32147 5 2.21019 5.05268 2.12814 5.14645C2.04609 5.24021 2 5.36739 2 5.5ZM5.0625 5.5C5.0625 5.63261 5.10859 5.75979 5.19064 5.85355C5.27269 5.94732 5.38397 6 5.5 6C5.61603 6 5.72731 5.94732 5.80936 5.85355C5.89141 5.75979 5.9375 5.63261 5.9375 5.5C5.9375 5.36739 5.89141 5.24021 5.80936 5.14645C5.72731 5.05268 5.61603 5 5.5 5C5.38397 5 5.27269 5.05268 5.19064 5.14645C5.10859 5.24021 5.0625 5.36739 5.0625 5.5ZM8.125 5.5C8.125 5.63261 8.17109 5.75979 8.25314 5.85355C8.33519 5.94732 8.44647 6 8.5625 6C8.67853 6 8.78981 5.94732 8.87186 5.85355C8.95391 5.75979 9 5.63261 9 5.5C9 5.36739 8.95391 5.24021 8.87186 5.14645C8.78981 5.05268 8.67853 5 8.5625 5C8.44647 5 8.33519 5.05268 8.25314 5.14645C8.17109 5.24021 8.125 5.36739 8.125 5.5Z"
+                          stroke="black"
+                          stroke-width="0.911616"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+                <div class="product-card__text-info">
+                  <h2 class="product-card__title">Название продукта</h2>
+                  <p class="product-card__description">
+                    Описание продукта, его свойств, преимуществ, важных факторов
+                    состав, объём состав, объём состав, объём состав, объём
+                    состав, объём состав, объём состав, объём состав, объём
+                    состав, объём состав, объём
+                  </p>
+                </div>
+                <div class="product-card__footer">
+                  <p class="product-card__price">2 500 ₽</p>
+                  <button type="button" class="button button--variant-small">
+                    Изменить
+                  </button>
+                </div>
+              </div>
+            </section>
+            <section class="product-card">
+              <div class="product-card__image">
+                <img
+                  width="230"
+                  height="161"
+                  src="../assets/img/product-image.jpg"
+                  alt="product card image"
+                />
+              </div>
+              <div class="product-card__main-info">
+                <div class="product-card__categories">
+                  <button type="button" class="tag tag--variant-small">
+                    <span class="tag__text">Уходовые средства</span>
+                  </button>
+                  <button type="button" class="tag tag--variant-small">
+                    <span class="tag__text">Косметика</span>
+                  </button>
+                  <button type="button" class="tag tag--variant-small">
+                    <span class="tag__text">Уход за лицом</span>
+                  </button>
+
+                  <button
+                    class="button-radio-icon button-radio-icon--variant-small"
+                    type="button"
+                  >
+                    <div class="icon-dotted">
+                      <svg
+                        width="11"
+                        height="11"
+                        viewBox="0 0 11 11"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2 5.5C2 5.63261 2.04609 5.75979 2.12814 5.85355C2.21019 5.94732 2.32147 6 2.4375 6C2.55353 6 2.66481 5.94732 2.74686 5.85355C2.82891 5.75979 2.875 5.63261 2.875 5.5C2.875 5.36739 2.82891 5.24021 2.74686 5.14645C2.66481 5.05268 2.55353 5 2.4375 5C2.32147 5 2.21019 5.05268 2.12814 5.14645C2.04609 5.24021 2 5.36739 2 5.5ZM5.0625 5.5C5.0625 5.63261 5.10859 5.75979 5.19064 5.85355C5.27269 5.94732 5.38397 6 5.5 6C5.61603 6 5.72731 5.94732 5.80936 5.85355C5.89141 5.75979 5.9375 5.63261 5.9375 5.5C5.9375 5.36739 5.89141 5.24021 5.80936 5.14645C5.72731 5.05268 5.61603 5 5.5 5C5.38397 5 5.27269 5.05268 5.19064 5.14645C5.10859 5.24021 5.0625 5.36739 5.0625 5.5ZM8.125 5.5C8.125 5.63261 8.17109 5.75979 8.25314 5.85355C8.33519 5.94732 8.44647 6 8.5625 6C8.67853 6 8.78981 5.94732 8.87186 5.85355C8.95391 5.75979 9 5.63261 9 5.5C9 5.36739 8.95391 5.24021 8.87186 5.14645C8.78981 5.05268 8.67853 5 8.5625 5C8.44647 5 8.33519 5.05268 8.25314 5.14645C8.17109 5.24021 8.125 5.36739 8.125 5.5Z"
+                          stroke="black"
+                          stroke-width="0.911616"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+                <div class="product-card__text-info">
+                  <h2 class="product-card__title">Название продукта</h2>
+                  <p class="product-card__description">
+                    Описание продукта, его свойств, преимуществ, важных факторов
+                    состав, объём состав, объём состав, объём состав, объём
+                    состав, объём состав, объём состав, объём состав, объём
+                    состав, объём состав, объём
+                  </p>
+                </div>
+                <div class="product-card__footer">
+                  <p class="product-card__price">2 500 ₽</p>
+                  <button type="button" class="button button--variant-small">
+                    Изменить
+                  </button>
+                </div>
+              </div>
+            </section>
+            <section class="product-card">
+              <div class="product-card__image">
+                <img
+                  width="230"
+                  height="161"
+                  src="../assets/img/product-image.jpg"
+                  alt="product card image"
+                />
+              </div>
+              <div class="product-card__main-info">
+                <div class="product-card__categories">
+                  <button type="button" class="tag tag--variant-small">
+                    <span class="tag__text">Уходовые средства</span>
+                  </button>
+                  <button type="button" class="tag tag--variant-small">
+                    <span class="tag__text">Косметика</span>
+                  </button>
+                  <button type="button" class="tag tag--variant-small">
+                    <span class="tag__text">Уход за лицом</span>
+                  </button>
+
+                  <button
+                    class="button-radio-icon button-radio-icon--variant-small"
+                    type="button"
+                  >
+                    <div class="icon-dotted">
+                      <svg
+                        width="11"
+                        height="11"
+                        viewBox="0 0 11 11"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2 5.5C2 5.63261 2.04609 5.75979 2.12814 5.85355C2.21019 5.94732 2.32147 6 2.4375 6C2.55353 6 2.66481 5.94732 2.74686 5.85355C2.82891 5.75979 2.875 5.63261 2.875 5.5C2.875 5.36739 2.82891 5.24021 2.74686 5.14645C2.66481 5.05268 2.55353 5 2.4375 5C2.32147 5 2.21019 5.05268 2.12814 5.14645C2.04609 5.24021 2 5.36739 2 5.5ZM5.0625 5.5C5.0625 5.63261 5.10859 5.75979 5.19064 5.85355C5.27269 5.94732 5.38397 6 5.5 6C5.61603 6 5.72731 5.94732 5.80936 5.85355C5.89141 5.75979 5.9375 5.63261 5.9375 5.5C5.9375 5.36739 5.89141 5.24021 5.80936 5.14645C5.72731 5.05268 5.61603 5 5.5 5C5.38397 5 5.27269 5.05268 5.19064 5.14645C5.10859 5.24021 5.0625 5.36739 5.0625 5.5ZM8.125 5.5C8.125 5.63261 8.17109 5.75979 8.25314 5.85355C8.33519 5.94732 8.44647 6 8.5625 6C8.67853 6 8.78981 5.94732 8.87186 5.85355C8.95391 5.75979 9 5.63261 9 5.5C9 5.36739 8.95391 5.24021 8.87186 5.14645C8.78981 5.05268 8.67853 5 8.5625 5C8.44647 5 8.33519 5.05268 8.25314 5.14645C8.17109 5.24021 8.125 5.36739 8.125 5.5Z"
+                          stroke="black"
+                          stroke-width="0.911616"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+                <div class="product-card__text-info">
+                  <h2 class="product-card__title">Название продукта</h2>
+                  <p class="product-card__description">
+                    Описание продукта, его свойств, преимуществ, важных факторов
+                    состав, объём состав, объём состав, объём состав, объём
+                    состав, объём состав, объём состав, объём состав, объём
+                    состав, объём состав, объём
+                  </p>
+                </div>
+                <div class="product-card__footer">
+                  <p class="product-card__price">2 500 ₽</p>
+                  <button type="button" class="button button--variant-small">
+                    Изменить
+                  </button>
+                </div>
+              </div>
+            </section>
+            <section class="product-card">
+              <div class="product-card__image">
+                <img
+                  width="230"
+                  height="161"
+                  src="../assets/img/product-image.jpg"
+                  alt="product card image"
+                />
+              </div>
+              <div class="product-card__main-info">
+                <div class="product-card__categories">
+                  <button type="button" class="tag tag--variant-small">
+                    <span class="tag__text">Уходовые средства</span>
+                  </button>
+                  <button type="button" class="tag tag--variant-small">
+                    <span class="tag__text">Косметика</span>
+                  </button>
+                  <button type="button" class="tag tag--variant-small">
+                    <span class="tag__text">Уход за лицом</span>
+                  </button>
+
+                  <button
+                    class="button-radio-icon button-radio-icon--variant-small"
+                    type="button"
+                  >
+                    <div class="icon-dotted">
+                      <svg
+                        width="11"
+                        height="11"
+                        viewBox="0 0 11 11"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2 5.5C2 5.63261 2.04609 5.75979 2.12814 5.85355C2.21019 5.94732 2.32147 6 2.4375 6C2.55353 6 2.66481 5.94732 2.74686 5.85355C2.82891 5.75979 2.875 5.63261 2.875 5.5C2.875 5.36739 2.82891 5.24021 2.74686 5.14645C2.66481 5.05268 2.55353 5 2.4375 5C2.32147 5 2.21019 5.05268 2.12814 5.14645C2.04609 5.24021 2 5.36739 2 5.5ZM5.0625 5.5C5.0625 5.63261 5.10859 5.75979 5.19064 5.85355C5.27269 5.94732 5.38397 6 5.5 6C5.61603 6 5.72731 5.94732 5.80936 5.85355C5.89141 5.75979 5.9375 5.63261 5.9375 5.5C5.9375 5.36739 5.89141 5.24021 5.80936 5.14645C5.72731 5.05268 5.61603 5 5.5 5C5.38397 5 5.27269 5.05268 5.19064 5.14645C5.10859 5.24021 5.0625 5.36739 5.0625 5.5ZM8.125 5.5C8.125 5.63261 8.17109 5.75979 8.25314 5.85355C8.33519 5.94732 8.44647 6 8.5625 6C8.67853 6 8.78981 5.94732 8.87186 5.85355C8.95391 5.75979 9 5.63261 9 5.5C9 5.36739 8.95391 5.24021 8.87186 5.14645C8.78981 5.05268 8.67853 5 8.5625 5C8.44647 5 8.33519 5.05268 8.25314 5.14645C8.17109 5.24021 8.125 5.36739 8.125 5.5Z"
+                          stroke="black"
+                          stroke-width="0.911616"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+                <div class="product-card__text-info">
+                  <h2 class="product-card__title">Название продукта</h2>
+                  <p class="product-card__description">
+                    Описание продукта, его свойств, преимуществ, важных факторов
+                    состав, объём состав, объём состав, объём состав, объём
+                    состав, объём состав, объём состав, объём состав, объём
+                    состав, объём состав, объём
+                  </p>
+                </div>
+                <div class="product-card__footer">
+                  <p class="product-card__price">2 500 ₽</p>
+                  <button type="button" class="button button--variant-small">
+                    Изменить
+                  </button>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal">
+        <div
+          class="modal__wrapper modal__wrapper--size-l modal__wrapper--with-scroll"
+        >
+          <div class="scrollbar modal__scroll-wrapper">
+            <div class="product-gallery mb-16">
+              <div class="product-gallery__main-img">
+                <img src="../assets/img/main-gallery.jpg" />
+              </div>
+
+              <div class="product-gallery__list-img">
+                <button type="button" class="product-gallery__btn-img">
+                  <img src="../assets/img/main-gallery.jpg" />
+                </button>
+                <button type="button" class="product-gallery__btn-img">
+                  <img src="../assets/img/main-gallery.jpg" />
+                </button>
+                <button type="button" class="product-gallery__btn-img">
+                  <img src="../assets/img/main-gallery.jpg" />
+                </button>
+                <button type="button" class="product-gallery__btn-img">
+                  <img src="../assets/img/main-gallery.jpg" />
+                </button>
+              </div>
+            </div>
+
+            <div class="product-tag-list mb-16">
+              <div class="product-tag-list__wrapper scrollbar">
+                <button type="button" class="tag">
+                  <span class="tag__text">Уходовая</span>
+                </button>
+                <button type="button" class="tag">
+                  <span class="tag__text">Увлажнение</span>
+                </button>
+                <button type="button" class="tag">
+                  <span class="tag__text">Косметика</span>
+                </button>
+                <button type="button" class="tag">
+                  <span class="tag__text">Косметика</span>
+                </button>
+                <button type="button" class="tag">
+                  <span class="tag__text">Косметика</span>
+                </button>
+                <button type="button" class="tag">
+                  <span class="tag__text">Косметика</span>
+                </button>
+                <button type="button" class="tag">
+                  <span class="tag__text">Косметика</span>
+                </button>
+                <button type="button" class="tag">
+                  <span class="tag__text">Косметика</span>
+                </button>
+                <button type="button" class="tag">
+                  <span class="tag__text">Косметика</span>
+                </button>
+              </div>
+            </div>
+            <h2 class="modal__title modal__title--variant-medium">Шампунь</h2>
+            <p class="product-description">
+              Шампунь для светлых, окрашенных волос поддерживает холодные
+              оттенки окрашенных светлых волос, нейтрализуя желтые и медные
+              тона, придает волосам блеск и мягкость.
+            </p>
+            <p class="product-description">
+              Эффективная формула бережно очищает, интенсивно увлажняет
+              и укрепляет волосы по всей длине.
+            </p>
+
+            <div class="modal__form-actions">
+              <button class="button" type="submit">В корзину</button>
+              <p class="product-price mr-auto">2 500 ₽</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal__overlay"></div>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/list@latest"></script>
+    <script src="../libs/editor-js/init.js"></script>
+  </body>
+</html>
