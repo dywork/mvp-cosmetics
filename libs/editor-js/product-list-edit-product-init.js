@@ -4,6 +4,6 @@ const editor = new EditorJS({
 
   tools: {
     header: Header,
-    list: List,
+    list: EditorjsList,
   },
 });
